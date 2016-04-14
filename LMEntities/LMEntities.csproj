@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LMEntities</RootNamespace>
     <AssemblyName>LMEntities</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -44,6 +44,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Abstractions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,221 +53,90 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CityStateZip.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Event.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EventAddress.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EventComment.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EventInvitee.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EventMedia.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EventType.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Facility.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FacilityBooking.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FacilityBookingStatu.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FacilityBookingUnitType.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="FacilityCancellation.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Gender.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventAddresses_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventComments_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventInviteeByUserId_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventInvitees_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventMediaById_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventMediaComments_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventMedia_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEvents_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEventTypeList_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetEvent_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetListItems_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetOrganization_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetRSVPCount_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetRSVPList_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamList_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamManagement_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamMemberByTeam_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamMember_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeams_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeamTitleList_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetTeam_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetUserByEmailId_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetUserListByRSVP_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetUserList_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GetUser_Result.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="League.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LMEntityModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LMEntityModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LMEntityModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="LMEntityModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LMEntityModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="MatchResult.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MediaComment.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="MediaType.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Notification.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NotificationStatu.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="NotificationType.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Organization.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Common\DateRangeAttribute.cs" />
+    <Compile Include="Mapping\CityStateZipMap.cs" />
+    <Compile Include="Mapping\EventAddressMap.cs" />
+    <Compile Include="Mapping\EventCommentMap.cs" />
+    <Compile Include="Mapping\EventInviteeMap.cs" />
+    <Compile Include="Mapping\EventMap.cs" />
+    <Compile Include="Mapping\EventMediaMap.cs" />
+    <Compile Include="Mapping\EventTypeMap.cs" />
+    <Compile Include="Mapping\FacilityBookingMap.cs" />
+    <Compile Include="Mapping\FacilityBookingStatuMap.cs" />
+    <Compile Include="Mapping\FacilityBookingUnitTypeMap.cs" />
+    <Compile Include="Mapping\FacilityCancellationMap.cs" />
+    <Compile Include="Mapping\FacilityMap.cs" />
+    <Compile Include="Mapping\GenderMap.cs" />
+    <Compile Include="Mapping\LeagueMap.cs" />
+    <Compile Include="Mapping\MatchResultMap.cs" />
+    <Compile Include="Mapping\MediaCommentMap.cs" />
+    <Compile Include="Mapping\MediaTypeMap.cs" />
+    <Compile Include="Mapping\NotificationMap.cs" />
+    <Compile Include="Mapping\NotificationStatuMap.cs" />
+    <Compile Include="Mapping\NotificationTypeMap.cs" />
+    <Compile Include="Mapping\OrganizationMap.cs" />
+    <Compile Include="Mapping\RSVPMasterMap.cs" />
+    <Compile Include="Mapping\ScheduleMap.cs" />
+    <Compile Include="Mapping\SeasonMap.cs" />
+    <Compile Include="Mapping\SkillSpecialityMap.cs" />
+    <Compile Include="Mapping\sysdiagramMap.cs" />
+    <Compile Include="Mapping\TeamManagementMap.cs" />
+    <Compile Include="Mapping\TeamMap.cs" />
+    <Compile Include="Mapping\TeamMemberMap.cs" />
+    <Compile Include="Mapping\TeamTitleMap.cs" />
+    <Compile Include="Mapping\UserMap.cs" />
+    <Compile Include="Mapping\UserTypeMap.cs" />
+    <Compile Include="Mapping\GroundMap.cs" />
+    <Compile Include="Mapping\YearMap.cs" />
+    <Compile Include="Models\CityStateZip.cs" />
+    <Compile Include="Models\Event.cs" />
+    <Compile Include="Models\EventAddress.cs" />
+    <Compile Include="Models\EventComment.cs" />
+    <Compile Include="Models\EventInvitee.cs" />
+    <Compile Include="Models\EventMedia.cs" />
+    <Compile Include="Models\EventType.cs" />
+    <Compile Include="Models\Facility.cs" />
+    <Compile Include="Models\FacilityBooking.cs" />
+    <Compile Include="Models\FacilityBookingStatu.cs" />
+    <Compile Include="Models\FacilityBookingUnitType.cs" />
+    <Compile Include="Models\FacilityCancellation.cs" />
+    <Compile Include="Models\Gender.cs" />
+    <Compile Include="Models\League.cs" />
+    <Compile Include="Models\MatchResult.cs" />
+    <Compile Include="Models\MediaComment.cs" />
+    <Compile Include="Models\MediaType.cs" />
+    <Compile Include="Models\Notification.cs" />
+    <Compile Include="Models\NotificationStatu.cs" />
+    <Compile Include="Models\NotificationType.cs" />
+    <Compile Include="Models\Organization.cs" />
+    <Compile Include="Models\RSVPMaster.cs" />
+    <Compile Include="Models\Schedule.cs" />
+    <Compile Include="Models\Season.cs" />
+    <Compile Include="Models\SkillSpeciality.cs" />
+    <Compile Include="Models\sysdiagram.cs" />
+    <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\TeamManagement.cs" />
+    <Compile Include="Models\TeamMember.cs" />
+    <Compile Include="Models\TeamTitle.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\UserType.cs" />
+    <Compile Include="Models\Ground.cs" />
+    <Compile Include="Models\Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RSVPMaster.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Schedule.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Season.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SkillSpeciality.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Team.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeamManagement.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeamMember.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TeamTitle.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="UserType.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Year.cs">
-      <DependentUpon>LMEntityModel.tt</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EntityDeploy Include="LMEntityModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>LMEntityModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.Config" />
-    <None Include="LMEntityModel.edmx.diagram">
-      <DependentUpon>LMEntityModel.edmx</DependentUpon>
-    </None>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="LMEntityModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LMEntityModel.edmx</DependentUpon>
-      <LastGenOutput>LMEntityModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="LMEntityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>LMEntityModel.edmx</DependentUpon>
-      <LastGenOutput>LMEntityModel.cs</LastGenOutput>
-    </Content>
+    <Compile Include="SportsSiteContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Repository.Pattern.Ef6\Repository.Pattern.Ef6.csproj">
+      <Project>{f68a1d19-93fb-47c1-a22b-42bea3e4fd8c}</Project>
+      <Name>Repository.Pattern.Ef6</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repository.Pattern\Repository.Pattern.csproj">
+      <Project>{6e682a14-c872-4813-b620-76e108dea683}</Project>
+      <Name>Repository.Pattern</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,120 @@
+﻿@model IEnumerable<LMEntities.Models.Schedule>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="col-md-12 col-sm-12 mininumheight">
+    <div class="table-responsive">
+        <div class="form-group">
+
+            <b> @Html.ActionLink("Add New Schedule", "Create", new { htmlAttributes = new { @class = "col-sm-12 control-label back" } })</b>
+
+        </div>
+        <table class="col-md-12 table-bordered table-striped table-condensed cf">
+            <thead class="cf">
+                <tr>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.GroundId)
+                    </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.SeasonId)
+                    </th>
+
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.HomeTeamId)
+                    </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.VisitorTeamId)
+                    </th>
+                    <th>
+                            @Html.DisplayNameFor(model => model.UmpireId)
+                        </th>
+
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.ScheduleDate)
+                    </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.StartTime)
+                    </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.EndTime)
+                    </th>
+
+                    @*<th>
+                            @Html.DisplayNameFor(model => model.CreatedOn)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreatedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ModifiedOn)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.ModfiedBy)
+                        </th>*@
+
+                    <th></th>
+
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tbody>
+                    <tr>
+                        <td class="numeric">
+                            @Html.ActionLink(item.Ground.Name, "Details", "Grounds", new { id = item.Ground.Id }, null)
+                            
+                          
+                        </td>
+                        <td class="numeric">
+                            @Html.DisplayFor(modelItem => item.Season.Name)
+                        </td>
+
+                        <td class="numeric">
+                            @Html.ActionLink(item.Team.Name, "Details", "Teams", new { id = item.Team.Id }, null)
+                        </td>
+                        <td class="numeric">
+                            @Html.ActionLink(item.Team1.Name, "Details", "Teams", new { id = item.Team1.Id }, null)
+                        </td>
+                        <td class="numeric">
+                            @Html.ActionLink(item.Umpire.UserName, "Details", "Upmires", new { id = item.Umpire.Id }, null)
+                          
+                        </td>
+                        <td class="numeric">
+                            @Html.DisplayFor(modelItem => item.ScheduleDate)
+                        </td>
+                        
+                        <td class="numeric">
+                            @Html.DisplayFor(modelItem => item.StartTime)
+                        </td>
+                        <td class="numeric">
+                            @Html.DisplayFor(modelItem => item.EndTime)
+                        </td>
+                     
+                       @if (User.IsInRole("Admin"))
+                       {
+                        <td class="numeric">                           
+                            @Html.ActionLink("View Details", "Details", new { id = item.Id }) |
+                           
+                            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) 
+                            |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.Id }) 
+                                                                                                            
+                        </td>
+                       }
+
+                       else
+                       {
+                        <td class="numeric">
+                            @Html.ActionLink("View Details", "Details", new { id = item.Id })
+
+                        </td>
+                       }
+                    </tr>
+                </tbody>    
+                            }
+        </table>
+    </div>
+    </div>

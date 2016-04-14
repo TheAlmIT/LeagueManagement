@@ -1,0 +1,104 @@
+﻿@model LMEntities.Models.Schedule
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="col-md-8 col-sm-6 mininumheight">
+    <div id="loginbox" style="margin-top:10px;" class="mainbox col-md-9 col-md-offset-1 col-sm-9">
+        @using (Html.BeginForm())
+            {
+            @Html.AntiForgeryToken()
+            <h1>Delete Schedule</h1>
+            <h3>Are you sure you want to delete this schedule?</h3>
+            <div class="form-horizontal team">
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.GroundId)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.Ground.Name)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.SeasonId)
+                    </label><div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Season.Name)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.HomeTeamId)
+                    </label><div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Team.Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.VisitorTeamId)
+                    </label><div class="col-sm-8">
+                        @Html.DisplayFor(model => model.Team1.Name)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.UmpireId)
+                    </label><div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Umpire.UserName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.ScheduleDate)
+                    </label><div class="col-sm-8">
+                        @Html.DisplayFor(model => model.ScheduleDate)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.StartTime)
+                    </label><div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.StartTime)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.EndTime)
+                    </label><div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.EndTime)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-4 col-md-10">
+                        <input type="submit" value="Delete" class="btn btn-default create" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-6 control-label">
+                        <b> @Html.ActionLink("Back To List", "Index", new { htmlAttributes = new { @class = "col-md-8 control-label back" } })</b>
+                    </label>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+@Html.Partial("_PartialStyle")
+
+

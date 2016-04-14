@@ -12,7 +12,7 @@ using LeagueManagement.Models;
 
 namespace LeagueManagement.Controllers
 {
-    [Authorize]
+   
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;
@@ -151,7 +151,7 @@ namespace LeagueManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email , FirstName = model.FirstName , LastName = model.LastName , PhoneNumber = model.PhoneNumber};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

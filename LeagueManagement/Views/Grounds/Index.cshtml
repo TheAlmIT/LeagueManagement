@@ -1,0 +1,56 @@
+﻿@model IEnumerable<LMEntities.Models.Ground>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+<div class="col-md-12 col-sm-12 mininumheight">
+    <div class="table-responsive">
+        <div class="form-group">
+
+            <b> @Html.ActionLink("Add New Ground", "Create", new { htmlAttributes = new { @class = "col-sm-12 control-label back" } })</b>
+
+        </div>
+        <table class="col-md-12 table-bordered table-striped table-condensed cf">
+            <thead class="cf">
+                <tr>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.Address)
+                    </th>
+                    <th class="numeric">
+                        @Html.DisplayNameFor(model => model.Directions)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+
+                @foreach (var item in Model)
+                {
+                    <tbody>
+                        <tr>
+                            <td class="numeric">
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td class="numeric">
+                                @Html.DisplayFor(modelItem => item.Address)
+                            </td>
+                            <td class="numeric">
+                                @Html.DisplayFor(modelItem => item.Directions)
+                            </td>
+                            <td class="numeric">
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                            </td>
+                        </tr>
+                    </tbody>
+                }
+
+        </table>
+        </div>
+</div>

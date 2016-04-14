@@ -1,0 +1,66 @@
+﻿@model LMEntities.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-md-8 col-sm-6 mininumheight">
+    <div id="loginbox" style="margin-top:10px;" class="mainbox col-md-9 col-md-offset-1 col-sm-9">
+        @using (Html.BeginForm())
+            {
+            @Html.AntiForgeryToken()
+            <h2>Umpire Details</h2>
+            <hr />
+            <div class="form-horizontal team">
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.EmailId)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.EmailId)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.FirstName)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.LastName)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.PhoneNumber)
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <b>
+                        <label for="inputEmail3" class="col-sm-6 control-label">
+                            @if (User.IsInRole("Admin"))
+                            {
+                                @Html.ActionLink("Edit Schedule", "Edit", new { id = Model.Id }, new { htmlAttributes = new { @class = "col-sm-4 control-label" } })
+                            }
+                            @Html.ActionLink("Back To List", "Index")
+                        </label>
+                    </b>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@Html.Partial("_PartialStyle")

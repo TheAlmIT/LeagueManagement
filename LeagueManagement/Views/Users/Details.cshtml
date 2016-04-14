@@ -1,0 +1,114 @@
+﻿@model LMEntities.Models.User
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organization.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User1.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User1.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProfilePhoto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProfilePhoto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

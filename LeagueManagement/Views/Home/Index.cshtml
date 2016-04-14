@@ -2,30 +2,1664 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+    <div class="col-md-8 col-sm-8">
+        <div class="banner">
+            <!-- The carousel -->
+            <div id="transition-timer-carousel" class="carousel slide transition-timer-carousel" data-ride="carousel">
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="~/images/banner.png" class="img-responsive" />
+                        <div class="carousel-caption">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                            <p class="carousel-caption-text hidden-sm hidden-xs">
+                                Congratulations to all the teams/individuals who have received the following awards for their exceptional performance during MPL-2015.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="~/images/banner.png" class="img-responsive" />
+                        <div class="carousel-caption">
+
+                            <p class="carousel-caption-text hidden-sm hidden-xs">
+                                Congratulations to all the teams/individuals who have received the following awards for their exceptional performance during MPL-2015.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="item">
+                        <img src="~/images/banner.png" class="img-responsive" />
+                        <div class="carousel-caption">
+
+                            <p class="carousel-caption-text hidden-sm hidden-xs">
+                                Congratulations to all the teams/individuals who have received the following awards for their exceptional performance during MPL-2015.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- Timer "progress bar" -->
+                <hr class="transition-timer-carousel-progress-bar animate" />
+            </div>
+        </div>
+        <div>
+            <ul class="nav nav-tabs sidebar-tabs" id="sidebar" role="tablist">
+                <li class="active"><a href="#tab41" role="tab" data-toggle="tab">Results</a></li>
+                <li class=""><a href="#tab42" role="tab" data-toggle="tab">Schedule</a></li>
+                <li class=""><a href="#tab43" role="tab" data-toggle="tab">Schedule</a></li>
+                <li class=""><a href="#tab44" role="tab" data-toggle="tab">Schedule</a></li>
+                <li class=""><a href="#tab45" role="tab" data-toggle="tab">Schedule</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab41">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.tab-pane -->
+                <div class="tab-pane fade in" id="tab42">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.tab-pane -->
+                <div class="tab-pane fade in" id="tab43">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.tab-pane -->
+                <div class="tab-pane fade in" id="tab44">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.tab-pane -->
+                <div class="tab-pane fade in" id="tab45">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="col-title">Batting</h5>
+                            <div class="table-responsive">
+                                <table class="table table-hover tablebatting" id="anyid">
+                                    <thead>
+                                        <tr>
+                                            <th align="left" class="header">Player</th>
+                                            <th align="left" class="header">M&nbsp;</th>
+                                            <th align="left" class="header">I&nbsp;&nbsp;</th>
+                                            <th align="left" class="header">R&nbsp;</th>
+                                            <th align="left" class="header">HS&nbsp;</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=20103&amp;clubId=1"> Rajaneesh Gullapa.. (LBR)</a></td>
+                                            <td>14</td>
+                                            <td>14</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=20103&amp;league=4&amp;clubId=1"><b><b>499</b></b></a></td>
+                                            <td>139</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=346&amp;clubId=1"> Purnendu Sahu (SGG)</a></td>
+                                            <td>14</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=346&amp;league=4&amp;clubId=1"><b><b>434</b></b></a></td>
+                                            <td>79</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=279&amp;clubId=1"> Satish Kalikevaye (AQN)</a></td>
+                                            <td>13</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=279&amp;league=4&amp;clubId=1"><b><b>328</b></b></a></td>
+                                            <td>60</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=27&amp;clubId=1"> Uday kumar Vala (SCR)</a></td>
+                                            <td>13</td>
+                                            <td>13</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=27&amp;league=4&amp;clubId=1"><b><b>326</b></b></a></td>
+                                            <td>76</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td align="left" nowrap="nowrap"><a href="viewPlayer.do?playerId=348&amp;clubId=1"> Ravitej Pujari (CPR)</a></td>
+                                            <td>12</td>
+                                            <td>12</td>
+                                            <td><a class="linkStyle" href="/CricketMilwaukee/playerBattingRecords.do?playerId=348&amp;league=4&amp;clubId=1"><b><b>291</b></b></a></td>
+                                            <td>48</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.tab-pane -->
+            </div>
+        </div>
+
+        <div class="gallery">
+            <div class="maintabs">
+                <ul class="nav nav-tabs nav-tabs1" id="myTab">
+                    <li class="active"><a href="#tab61" role="tab" data-toggle="tab">Photos</a></li>
+                    <li class=""><a href="#tab62" role="tab" data-toggle="tab">Galleries</a></li>
+
+                </ul>
+                <div id="content" class="tab-content">
+                    <div class="tab-pane fade in tab-pane1 active" id="tab61">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                        </div>
+                    </div><!--/.tab-pane -->
+                    <div class="tab-pane fade in tab-pane1" id="tab62">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                            <div class="col-md-3">
+                                <img src="~/images/gallery.png">
+                                <p>Mar 13, 2016 Mashrafe Mortaza and Shakib Al Hasan shake hands after winning the match © AFP</p>
+                            </div>
+                        </div>
+                    </div><!--/.tab-pane -->
+                    <!--/.tab-pane -->
+                </div>
+            </div>
+        </div>
+
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    <div class="col-md-4 col-sm-4">
+        <div class="maintabs">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="active"><a href="#tab-1" role="tab" data-toggle="tab">Results</a></li>
+                <li class=""><a href="#tab-2" role="tab" data-toggle="tab">Schedule</a></li>
+
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="tab-1">
+                    <ul class="schedulelist">
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                    </ul>
+                </div><!--/.tab-pane -->
+                <div class="tab-pane fade in" id="tab-2">
+                    <ul class="schedulelist">
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                        <li>
+                            <div class="">Final: <a href="#"> Blue Whales v Garudas</a></div>
+                            <div class="">09/26/2015 - Blue Whales won by 46 runs</div>
+                        </li>
+                    </ul>
+                </div><!--/.tab-pane -->
+
+            </div>
+        </div>
+        <div class="livebg">
+            <div class="maintabs">
+                <ul class="nav nav-tabs nav-tabs1 " id="myTab" role="tablist">
+                    <li class="active"><a href="#tab31" role="tab" data-toggle="tab">Live</a></li>
+                    <li class=""><a href="#tab32" role="tab" data-toggle="tab">Results</a></li>
+                    <li class=""><a href="#tab33" role="tab" data-toggle="tab">Fixtures</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane tab-pane1 fade in active" id="tab31">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--/.tab-pane -->
+                    <div class="tab-pane tab-pane1 fade in" id="tab32">
+                        <div class="panel-group" id="accordion1">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne2">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne2" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo2">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree2">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour2">
+                                            World 20
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour2" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                        <p>Pakistan v Sri Lanka (15:00 local | 09:30 GMT)</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div><!--/.tab-pane -->
+                    <div class="tab-pane tab-pane1 fade in" id="tab33">
+                        <ul class="schedulelist1">
+                            <li>
+                                <div class="">1 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+
+                        </ul>
+                    </div><!--/.tab-pane -->
+                </div>
+            </div>
+            <div class="maintabs">
+                <h1>Most Viewed</h1>
+                <ul class="nav nav-tabs nav-tabs1" id="myTab">
+                    <li class="active"><a href="#tab51" role="tab" data-toggle="tab">Today</a></li>
+                    <li class=""><a href="#tab52" role="tab" data-toggle="tab">Last 7 Days</a></li>
+                    <li class=""><a href="#tab53" role="tab" data-toggle="tab">Last 30days</a></li>
+                </ul>
+                <div id="content" class="tab-content">
+                    <div class="tab-pane fade in tab-pane1 active" id="tab51">
+                        <ul class="schedulelist1">
+                            <li>
+                                <div class="">1 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                        </ul>
+                    </div><!--/.tab-pane -->
+                    <div class="tab-pane fade in tab-pane1" id="tab52">
+                        <ul class="schedulelist1">
+                            <li>
+                                <div class="">1 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                        </ul>
+                    </div><!--/.tab-pane -->
+                    <div class="tab-pane fade in tab-pane1" id="tab53">
+                        <ul class="schedulelist1">
+                            <li>
+                                <div class="">1 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                            <li>
+                                <div class="">3 )  Dhoni denied at the death</div>
+
+                            </li>
+                            <li>
+                                <div class="">2 )  Tamim ton secures Bangladesh's berth</div>
+
+                            </li>
+                        </ul>
+                    </div><!--/.tab-pane -->
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>

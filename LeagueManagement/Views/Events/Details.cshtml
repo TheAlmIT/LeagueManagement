@@ -1,0 +1,138 @@
+﻿@model LMEntities.Models.Event
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Event</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EventType.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EventType.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organization.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Team1.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Team1.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User1.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User1.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.User2.EmailId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User2.EmailId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactPhoneNumber1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactPhoneNumber1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContactPhoneNumber2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContactPhoneNumber2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreatedOn)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ModifiedOn)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
