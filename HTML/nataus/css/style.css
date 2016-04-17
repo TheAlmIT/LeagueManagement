@@ -1,0 +1,579 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	background:url(../images/bg.png) fixed center top no-repeat;
+	background-size: cover;
+	
+}
+h1, h2, h3, h4, h5, h6 {
+	text-transform:capitalize;
+	font-size:18px;
+}
+p {
+	font-size:12px;
+	color:#666666;
+}
+
+
+/* header*/
+.wrapper {
+	width:1170px;
+	max-width:100%;
+	margin:0 auto;
+	background:#FFFFFF;
+}
+
+/* social meadia*/
+
+/* icons*/
+.icons {
+    margin: 0;
+	display:inline-block;
+	margin-right:10px;
+}
+.icons ul {
+   
+    margin: 0;
+    padding: 0;
+}
+.icons ul li {
+    float: left;
+    list-style: outside none none;
+    padding: 9px 3px;
+}
+.icons ul li a.fb, .icons ul li a.twitter, .icons ul li a.linked, .icons ul li a.google {
+    display: block;
+    height: 32px;
+    padding: 0 !important;
+    width: 32px;
+}
+.icons ul li a.fb {
+    background: rgba(0, 0, 0, 0) url("../images/facebook_icon.png") no-repeat scroll 0 0;
+}
+.icons ul li a.fb:hover {
+    background: rgba(0, 0, 0, 0) url("../images/facebook_icon.png") no-repeat scroll 0 -32px;
+}
+.icons ul li a.twitter {
+    background: rgba(0, 0, 0, 0) url("../images/twitter_icon.png") no-repeat scroll 0 0;
+}
+.icons ul li a.twitter:hover {
+    background: rgba(0, 0, 0, 0) url("../images/twitter_icon.png") no-repeat scroll 0 -32px;
+}
+.icons ul li a.linked {
+    background: rgba(0, 0, 0, 0) url("../images/linkdin_icon.png") no-repeat scroll 0 0;
+}
+.icons ul li a.linked:hover {
+    background: rgba(0, 0, 0, 0) url("../images/linkdin_icon.png") no-repeat scroll 0 -32px;
+}
+.icons ul li a.google {
+    background: rgba(0, 0, 0, 0) url("../images/google_icon.png") no-repeat scroll 0 0;
+}
+.icons ul li a.google:hover {
+    background: rgba(0, 0, 0, 0) url("../images/google_icon.png") no-repeat scroll 0 -32px;
+}
+
+.register {
+    display: inline-block;
+    vertical-align: top;
+   margin-top:10px;
+   margin-right:13px;
+	
+}
+.register a{
+	background:#0a427b;
+	color:#FFFFFF;
+	padding:6px 15px;
+	
+}
+.register:last-child {
+	 margin-right:0px;
+}
+
+
+
+/* Sweep To Right */
+.register a {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.register a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #ba110c;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.register a:hover, .register a:focus, .register a:active {
+  color: white;
+  text-decoration:none;
+}
+.register a:hover:before, .register a:focus:before, .register a:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+
+
+
+
+.topright {
+	margin-top:40px;
+}
+#topBar {
+	display:block;
+	position:relative;
+	background-color:#fff;
+	min-height:30px;
+	z-index:10;
+}
+#topBar a.logo {
+	margin:15px 0;
+	display:inline-block;
+	min-height:50px;
+}
+body.boxed #topBar {
+	-webkit-border-bottom-left-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-bottomleft: 0;
+	-moz-border-radius-bottomright: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+#topNav a.logo.onepage {
+	display:inline-block;
+	height:50px;
+	overflow:hidden;
+	margin-top:3px;
+}
+
+
+
+
+.nav-tabs > li > a, 
+.nav-tabs > li > a:hover, 
+.nav-tabs > li > a:focus, 
+.nav-tabs > li.active > a, 
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  border: none;
+  border-radius: 0;
+}
+
+.nav-list { border-bottom: 1px solid #eee; }
+.nav-list > li { 
+  padding: 20px 15px 15px;
+  border-left: 1px solid #eee; 
+}
+.nav-list > li:last-child { border-right: 1px solid #eee; }
+.nav-list > li > a:hover { text-decoration: none; }
+.nav-list > li > a > span {
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.mega-dropdown { position: static !important; }
+.mega-dropdown-menu {
+  padding: 20px 15px 15px;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar-default {
+    background-color: #b90c10;
+    border:none;
+	border-radius:0px;
+}
+.navbar-default .navbar-nav>li>a {
+	color:#FFFFFF;
+	font-size:15px;
+}
+.container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+	margin-left:-15px;
+	margin-right:-15px;
+}
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+	color:#00fff6;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	color:#00fff6;
+	background-color:transparent;
+}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+	color:#00fff6;
+	background-color:transparent;
+}
+.dropdown-menu {
+	background-color:#b90c10;
+	color:#FFFFFF;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+	
+}
+.dropdown-menu>li>a {
+	color:#FFFFFF;
+}
+.nav>li>a {
+	padding:15px 10px;;
+}
+
+/* Tabs */
+.panel-heading {
+    padding: 0
+}
+.panel-heading a {
+    display: block;
+    padding: 8px 10px;
+}
+.panel-heading a.collapsed {
+    background: #0a427b;
+}
+.panel-heading a {
+    background: #0a427b;
+    border-radius: 0px;
+	font-weight:normal;
+}
+.panel-heading a:hover {
+	text-decoration:none;
+}
+.panel {
+	background-color:inherit;
+}
+.panel-default {
+	border:none;
+}
+.panel-body {
+	padding:10px 0;
+}
+.panel-body p {
+
+font-size:15px
+}
+
+.nav.nav-tabs li a,
+.nav.nav-tabs li.active > a:hover,
+.nav.nav-tabs li.active > a:active,
+.nav.nav-tabs li.active > a:focus {
+    border-bottom-width: 0px;
+    outline: none;
+}
+.nav.nav-tabs li a {
+    padding: 10px 20px;
+	border:1px solid #ddd;
+	border-bottom:none;
+}
+.nav-tabs>li>a {
+	margin-right:0;
+}
+.tab-pane {
+    background: #fff;
+    padding:0 10px;
+    border: 1px solid #ddd;
+    margin-top: -1px;
+}
+.tab-pane1 {
+    margin-top: 0px;
+}
+.schedulelist {
+	padding:0 10px;
+}
+.schedulelist li {
+	list-style:none;
+	font-size:13px;
+	border-bottom:1px solid #ddd;
+	line-height:18px;
+	padding:13px 0;
+	color:#666666;
+}
+.schedulelist li:last-child {
+	border-bottom:none;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+	color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+.maintabs {
+	margin-bottom:15px;
+}
+.livebg {
+	background:#ececec;
+	padding:10px;
+}
+.nav-tabs1 {
+	border-bottom:none;
+}
+
+.nav-tabs1>li.active>a, .nav-tabs1>li.active>a:hover, .nav-tabs1>li.active>a:focus {
+	background-color:inherit;
+	border:none;
+	color:#b90c10;
+}
+.nav.nav-tabs1 li a {
+	border:0px;
+	font-size:15px;
+	text-transform:uppercase;
+	padding:10px 10px;
+	
+}
+.nav-tabs1 > li > a:hover {
+	color:#b90c10;
+	background-color:transparent;
+}
+.nav.nav-tabs1 li a:first-child {
+}
+.maintabs h1 {
+	color:#2c2b2b;
+	font-size:18px;
+	padding-left:10px;
+	
+}
+.tab-pane1 {
+	background:none;
+	border:none;
+	padding:0 10px;
+}
+.schedulelist1 {
+	padding:0px;
+}
+.schedulelist1 li {
+	list-style:none;
+	font-size:15px;
+	border-bottom:1px solid #666666;
+	line-height:18px;
+	padding:15px 0;
+	color:#666666;
+}
+.schedulelist1 li:last-child {
+	border-bottom:none;
+}
+
+/* used for sidebar tab/collapse*/
+@media (max-width: 991px) {
+  .visible-tabs {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .visible-tabs {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .hidden-tabs {
+    display: none !important;
+  }
+}
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: #FFFFFF;
+	font-weight:normal;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+	font-weight:normal;
+}
+.panel-title {
+	font-size:15px;
+	color:#FFFFFF;
+}
+
+/* banner */
+.transition-timer-carousel .carousel-caption {
+   
+	width: 100%;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+.transition-timer-carousel .carousel-caption .carousel-caption-header {
+	margin-top: 10px;
+	font-size: 24px;
+}
+
+@media (min-width: 970px) {
+    /* Lower the font size of the carousel caption header so that our caption
+    doesn't take up the full image/slide on smaller screens */
+	.transition-timer-carousel .carousel-caption .carousel-caption-header {
+		font-size: 36px;
+	}
+}
+.transition-timer-carousel .carousel-indicators {
+	bottom: 0px;
+	margin-bottom: 5px;
+}
+.transition-timer-carousel .carousel-control {
+	z-index: 11;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar {
+    height: 5px;
+    background-color: #5cb85c;
+    width: 0%;
+    margin: -5px 0px 0px 0px;
+    border: none;
+    z-index: 11;
+    position: relative;
+}
+.transition-timer-carousel .transition-timer-carousel-progress-bar.animate{
+    /* We make the transition time shorter to avoid the slide transitioning
+    before the timer bar is "full" - change the 4.25s here to fit your
+    carousel's transition time */
+    -webkit-transition: width 4.25s linear;
+	-moz-transition: width 4.25s linear;
+	-o-transition: width 4.25s linear;
+	transition: width 4.25s linear;
+}
+.carousel-inner>.item>a>img, .carousel-inner>.item>img {
+	width:100%;
+}
+.banner {
+	margin-bottom:15px;
+}
+.transition-timer-carousel .carousel-caption {
+	background:rgba(185, 12, 16, 0.5);
+	padding:10px;
+}
+.carousel-caption-text {
+	color:#FFFFFF;
+	font-size:15px;
+	font-weight:normal;
+}
+.tablebatting thead {
+	background:#b90c10;
+	color:#FFFFFF;
+	
+}
+.tablebatting thead tr th{
+	font-weight:normal;
+	font-size:12px;
+}
+.tablebatting tbody tr td{
+	font-weight:normal;
+	font-size:12px;
+}
+.col-title {
+	color:#0a427b;
+	font-size:15px;
+	text-transform:uppercase;
+	font-weight:normal;
+}
+.gallery {
+	margin-top:25px;
+}
+
+/* footer css*/
+.footer {
+	background:#0a427b;
+	padding:15px 0;
+}
+.footermenu {
+	padding:0;
+}
+.footermenu li {
+	list-style:none;
+}
+.footermenu li a{
+	font-size:12px;
+	color:#ffffff;
+	text-transform:uppercase;
+	float:left;
+}
+.copyrights {
+	font-size:12px;
+	color:#FFFFFF;
+}
+/* Loign css*/
+
+.loginhead {
+	padding:10px;
+	background-color: #0a427b !important;
+    border-color: #0a427b !important;
+}
+.loginpanel {
+	padding:15px;
+}
+.mininumheight {
+	min-height:400px;
+	height:100%;
+}
+.mininumheight h1 {
+	padding:0;
+	margin:0 0 20px 0;
+	color:#b90c10;
+	
+}
+.mininumheight h2 {
+	padding:0;
+	margin:0 0 5px 0;
+	color:#0a427b;
+	font-size:16px;
+	
+}
+.mininumheight h3 {
+	padding:0;
+	margin:0 0 20px 0;
+	color:#0a427b;
+	font-size:15px;
+	
+}
+.form-group label {
+	color:#666666;
+}
+.team label {
+	padding-top:0 !important;
+}
+.create {
+	background:#0a427b;
+	border:none;
+	color:#FFFFFF;
+	
+	border-radius:0px;
+}
+
+.create:hover {
+	background:#b90c10;
+	color:#FFFFFF;
+	
+}
+.back {
+	text-align:left !important;
+}
+
+/* team table css* /
+

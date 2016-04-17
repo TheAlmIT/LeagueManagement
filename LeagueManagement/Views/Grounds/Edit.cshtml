@@ -4,9 +4,6 @@
     ViewBag.Title = "Edit";
 }
 
-
-
-
 <div class="col-md-8 col-sm-8 mininumheight">
     <div id="loginbox" style="margin-top:10px;" class="mainbox col-md-9 col-md-offset-1 col-sm-9">
 
@@ -43,18 +40,13 @@
                         @Html.ValidationMessageFor(model => model.Directions, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
-
                 <div class="form-group">
                     <div class="col-md-offset-4 col-md-10">
-                        <input type="submit" value="Save" class="btn btn-default create" />
+                        <div class="register">
+                            @Html.ActionLink("Back", "Index")
+                            <input type="submit" value="Save" class="btn btn-default create" />
+                        </div>
                     </div>
-                </div>
-                <div class="form-group">
-
-                    <b> @Html.ActionLink("Back To List", "Index", new { htmlAttributes = new { @class = "col-sm-12 control-label back" } })</b>
-
-
                 </div>
             </div>
 

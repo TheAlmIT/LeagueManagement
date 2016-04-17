@@ -22,7 +22,7 @@ namespace LMEntities.Models
 
         public int Id { get; set; }
         [Required]
-        [DisplayName("Team Name")]
+        [DisplayName("Name")]
         public string Name { get; set; }
         [Required]
         [DisplayName("Organization Name")]
@@ -30,7 +30,7 @@ namespace LMEntities.Models
         [Required]
         [DisplayName("Nick Name")]
         public string NickName { get; set; }
-        [Required]
+ 
         public string Description { get; set; }
         [DisplayName("Team Photo")]
         public string PhotoUrl { get; set; }
@@ -58,7 +58,7 @@ namespace LMEntities.Models
         [NotMapped]
         public virtual ICollection<User> Users { get; set; }
         [NotMapped]
-        [DisplayName("Please select Team Members")]
+        [DisplayName("Please Select Players To Add In Your Team ")]
         public string tm { get; set; }
 
 

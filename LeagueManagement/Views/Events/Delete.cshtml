@@ -1,0 +1,182 @@
+﻿@model LMEntities.Models.Event
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+
+
+<div class="col-md-12 col-sm-12 mininumheight">
+    <div id="loginbox" style="margin-top:10px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <h1>Delete</h1>
+        <h2>Are you sure you want to delete this?</h2>
+        <h3>Event</h3>
+        <form class="form-horizontal team">
+
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.EventType.Name)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.EventType.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Organization.Name)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Organization.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Team.Name)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Team.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Team1.Name)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Team1.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.User.EmailId)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.User.EmailId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.User1.EmailId)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.User1.EmailId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.User2.EmailId)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.User2.EmailId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Description)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Description)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.StartTime)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.StartTime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.EndTime)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.EndTime)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.ContactPhoneNumber1)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.ContactPhoneNumber1)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.ContactPhoneNumber2)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.ContactPhoneNumber2)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.CreatedOn)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.CreatedOn)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                </label> <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.ModifiedOn)
+                </div>
+            </div>
+
+
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </form>
+    </div>
+</div>

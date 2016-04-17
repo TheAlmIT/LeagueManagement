@@ -1,24 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using Repository.Pattern.Ef6;
 
 namespace LMEntities.Models
 {
-    public partial class SkillSpeciality :Repository.Pattern.Ef6.Entity
+    public sealed class SkillSpeciality :Entity
     {
         public SkillSpeciality()
         {
-            this.TeamMembers = new List<TeamMember>();
+            TeamMembers = new List<User>();
         }
 
         public int Id { get; set; }
         public int OrganizationId { get; set; }
         [DisplayName("Playing Role")]
         public string Name { get; set; }
-        public Nullable<int> CreatedBy { get; set; }
-        public Nullable<System.DateTime> CreatedOn { get; set; }
-        public Nullable<int> ModifiedBy { get; set; }
-        public Nullable<System.DateTime> ModifiedOn { get; set; }
-        public virtual ICollection<TeamMember> TeamMembers { get; set; }
+        public int? CreatedBy { get; set; }
+        public DateTime? CreatedOn { get; set; }
+        public int? ModifiedBy { get; set; }
+        public DateTime? ModifiedOn { get; set; }
+        public ICollection<User> TeamMembers { get; set; }
     }
 }

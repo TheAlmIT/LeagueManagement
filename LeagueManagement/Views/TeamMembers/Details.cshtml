@@ -1,0 +1,235 @@
+﻿@model LMEntities.Models.TeamMember
+@{
+    ViewBag.Title = "Details";
+}
+<div class="col-md-8 col-sm-6 mininumheight">
+    <div style="margin-top: 10px;" class="col-md-2 col-sm-9">
+        @if (Model.PhotoUrl != null)
+        {
+            <img src="@Url.Content(Model.PhotoUrl)" alt="Image" style="height:200px;width:150px;" />
+        }
+    </div>
+    <div id="loginbox" style="margin-top: 10px;" class="mainbox col-md-7 col-md-offset-1 col-sm-9">
+        <h2>Player Details</h2>
+        <hr />
+        <div class="form-horizontal team">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.TeamId)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.Team.Name)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.SkillSpecialityId)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.SkillSpeciality.Name)
+                </div>
+            </div>
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.NickName)
+                    </label> <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.NickName)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Birthday)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Birthday)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.PlaceofBirth)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.PlaceofBirth)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.LivedInUSAsince)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.LivedInUSAsince)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.SchoolName)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.SchoolName)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Grade)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Grade)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.BattingStyle)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.BattingStyle)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.FavouriteShot)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.FavouriteShot)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.BowlingStyle)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.BowlingStyle)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.FavoriteCricketer)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.FavoriteCricketer)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Likes)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Likes)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Dislikes)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Dislikes)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.FavouriteFood)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.FavouriteFood)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.FavouriteMovie)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.FavouriteMovie)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Ambition)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Ambition)
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-horizontal team">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.Hobbies)
+                    </label> <div class="col-sm-8">
+
+
+                        @Html.DisplayFor(model => model.Hobbies)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+    </div>
+</div>

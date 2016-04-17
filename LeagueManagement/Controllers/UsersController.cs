@@ -10,6 +10,10 @@ using System.Web.Mvc;
 using LMEntities.Models;
 using Repository.Pattern.UnitOfWork;
 using LMService;
+using Microsoft.AspNet.Identity;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
+
 namespace LeagueManagement.Controllers
 {
     public class UsersController : Controller
@@ -98,20 +102,20 @@ namespace LeagueManagement.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "Id,OrganizationId,UserTypeId,EmailId,FirstName,LastName,Password,GenderId,ProfilePhoto,CreatedOn,ModifiedOn")] User user)
+        public async Task<ActionResult> Edit(User user)
         {
-            if (ModelState.IsValid)
-            {
-                user.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
-                _UserService.Update(user);
-                _unitOfWork.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.GenderId = new SelectList(db.Genders, "Id", "Name", user.GenderId);
-            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", user.OrganizationId);
-            ViewBag.Id = new SelectList(db.Users, "Id", "EmailId", user.Id);
-            ViewBag.UserTypeId = new SelectList(db.UserTypes, "Id", "Name", user.UserTypeId);
-            return View(user);
+              if (ModelState.IsValid)
+                {
+                    user.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
+                    _UserService.Update(user);
+                    _unitOfWork.SaveChanges();
+                    return RedirectToAction("Index", "Home");
+                }
+                ViewBag.GenderId = new SelectList(db.Genders, "Id", "Name", user.GenderId);
+                ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", user.OrganizationId);
+                ViewBag.Id = new SelectList(db.Users, "Id", "EmailId", user.Id);
+                ViewBag.UserTypeId = new SelectList(db.UserTypes, "Id", "Name", user.UserTypeId);
+                return View(user);                              
         }
 
         // GET: Users/Delete/5
@@ -139,7 +143,22 @@ namespace LeagueManagement.Controllers
             return RedirectToAction("Index");
 
         }
-
+        public async Task<ActionResult> UpdateProfile()
+        {            
+            string userId = User.Identity.GetUserId();
+            User user = new User();
+            user = db.Users.Where(a => a.AspNetUsersId == userId).SingleOrDefault();
+            ViewBag.GenderId = new SelectList(db.Genders, "Id", "Name", user.GenderId);
+            ViewBag.OrganizationId = new SelectList(db.Organizations, "Id", "Name", user.OrganizationId);
+            ViewBag.Id = new SelectList(db.Users, "Id", "EmailId", user.Id);
+            ViewBag.UserTypeId = new SelectList(db.UserTypes, "Id", "Name", user.UserTypeId);           
+            ViewBag.SkillSpecialityId = new SelectList(db.SkillSpecialities, "Id", "Name",user.SkillSpecialityId);
+            if (user == null)
+            {
+                return HttpNotFound();
+            }           
+            return View("Edit", user);
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

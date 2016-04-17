@@ -1,11 +1,5 @@
-﻿
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
 using LMEntities.Models;
 using Repository.Pattern.UnitOfWork;
@@ -15,14 +9,15 @@ namespace LeagueManagement.Controllers
 {
     public class GroundsController : Controller
     {
-        private SportsSiteContext db = new SportsSiteContext();
         private readonly IGroundService _groundService;
-        private IUnitOfWork _unitOfWork;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IScheduleService _scheduleService;
 
-        public GroundsController(IGroundService GroundService, IUnitOfWork unitOfWork)
+        public GroundsController(IGroundService groundService, IUnitOfWork unitOfWork, IScheduleService scheduleService)
         {
-            _groundService = GroundService;
+            _groundService = groundService;
             _unitOfWork = unitOfWork;
+            _scheduleService = scheduleService;
         }
 
         public async Task<ActionResult> Index()
@@ -121,18 +116,20 @@ namespace LeagueManagement.Controllers
         public async Task<ActionResult> DeleteConfirmed(int id)
         {
             Ground ground = await _groundService.FindAsync(id);
-            _groundService.Delete(ground);
-            _unitOfWork.SaveChanges();
-            return RedirectToAction("Index");
-        }
+            ground.Schedules = _scheduleService.GetSchedules_forGround(id);
 
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing)
+            if(ground.Schedules.Count > 0)
             {
-                db.Dispose();
+                ModelState.AddModelError("Name", " You Cannot Delete This Ground,It Is Already Assigned To Schedules");
             }
-            base.Dispose(disposing);
+
+            if (ModelState.IsValid)
+            {
+                _groundService.Delete(ground);
+                _unitOfWork.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(ground);
         }
     }
 }

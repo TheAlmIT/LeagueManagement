@@ -1,0 +1,209 @@
+﻿@model IEnumerable<LMEntities.Models.TeamMember>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="col-md-12 col-sm-12 mininumheight">
+    <div class="table-responsive">
+        <div class="col-md-12 col-sm-12 mininumheight">
+            <div class="register">
+                <b> @Html.ActionLink("Add Team member", "Create", new {htmlAttributes = new {@class = "col-sm-12 control-label back"}})</b>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordred table-striped">
+                    <thead class="cf">
+                    <tr>
+                        @*<th>
+                                    @Html.DisplayNameFor(model => model.SkillSpeciality.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Team.Name)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.OrganizationId)
+                                </th>*@
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+
+                        <th>
+                                    @Html.DisplayNameFor(model => model.NickName)
+                                </th>
+                        @*<th>
+                                    @Html.DisplayNameFor(model => model.Birthday)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.PlaceofBirth)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.LivedInUSAsince)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.SchoolName)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Grade)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BattingStyle)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FavouriteShot)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.BowlingStyle)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FavoriteCricketer)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Likes)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Dislikes)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FavouriteFood)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.FavouriteMovie)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Ambition)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.Hobbies)
+                                </th>*@
+                        @*<th>
+                                    @Html.DisplayNameFor(model => model.PhotoUrl)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CreatedBy)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.CreatedOn)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                                </th>
+                                <th>
+                                    @Html.DisplayNameFor(model => model.ModifiedOn)
+                                </th>*@
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            @*<td>
+                                        @Html.DisplayFor(modelItem => item.SkillSpeciality.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Team.Name)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.OrganizationId)
+                                    </td>*@
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            @*<td>
+                                        @Html.DisplayFor(modelItem => item.NickName)
+                                    </td>*@
+                            @*<td>
+                                        @Html.DisplayFor(modelItem => item.Birthday)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.PlaceofBirth)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LivedInUSAsince)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.SchoolName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Grade)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BattingStyle)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FavouriteShot)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.BowlingStyle)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FavoriteCricketer)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Likes)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Dislikes)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FavouriteFood)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.FavouriteMovie)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Ambition)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Hobbies)
+                                    </td>*@
+                            @*<td>
+                                        @Html.DisplayFor(modelItem => item.PhotoUrl)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CreatedBy)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CreatedOn)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ModifiedBy)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.ModifiedOn)
+                                    </td>*@
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <td class="numeric">
+                                    <a href="@Url.Action("Details", new {id = item.ID})">
+                                        <i class="glyphicon glyphicon-eye-open btn btn-primary btn-xs"></i>
+                                        <span class="sr-only">Details</span>
+                                    </a>
+                                    <a href="@Url.Action("Edit", new {id = item.ID})">
+                                        <i class="glyphicon glyphicon-edit btn btn-primary btn-xs"></i>
+                                        <span class="sr-only">Edit</span>
+                                    </a>
+                                    <a href="@Url.Action("Delete", new {id = item.ID})">
+                                        <i class="glyphicon glyphicon-trash btn btn-danger btn-xs"></i>
+                                        <span class="sr-only">Delete</span>
+                                    </a>
+                                </td>
+                            }
+
+                            else
+                            {
+                                <td class="numeric">
+                                    <a href="@Url.Action("Details", new {id = item.ID})">
+                                        <i class="glyphicon glyphicon-eye-open btn btn-primary btn-xs"></i>
+                                        <span class="sr-only">Details</span>
+                                    </a>
+                                </td>
+                            }
+                        </tr>
+                    }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

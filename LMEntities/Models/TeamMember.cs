@@ -22,31 +22,12 @@ namespace LMEntities.Models
         [DisplayName("User Name")]
         public int UserId { get; set; }
         public string Name { get; set; }
-        public string NickName { get; set; }
-        [DisplayName("Skill")]
-        public Nullable<int> SkillSpecialityId { get; set; }
-        public Nullable<System.DateTime> Birthday { get; set; }
-        public string PlaceofBirth { get; set; }
-        public Nullable<int> LivedInUSAsince { get; set; }
-        public string SchoolName { get; set; }
-        public string Grade { get; set; }
-        public string BattingStyle { get; set; }
-        public string FavouriteShot { get; set; }
-        public string BowlingStyle { get; set; }
-        public string FavoriteCricketer { get; set; }
-        public string Likes { get; set; }
-        public string Dislikes { get; set; }
-        public string FavouriteFood { get; set; }
-        public string FavouriteMovie { get; set; }
-        public string Ambition { get; set; }
-        public string Hobbies { get; set; }
-        public string PhotoUrl { get; set; }
+       
         public Nullable<int> CreatedBy { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
         public Nullable<int> ModifiedBy { get; set; }
         public Nullable<System.DateTime> ModifiedOn { get; set; }
         public virtual ICollection<MatchResult> MatchResults { get; set; }
-        public virtual SkillSpeciality SkillSpeciality { get; set; }
         public virtual Team Team { get; set; }
         public virtual User  User { get; set; }
         public virtual ICollection<TeamManagement> TeamManagements { get; set; }

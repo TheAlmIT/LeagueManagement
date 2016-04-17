@@ -15,14 +15,6 @@
 
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">
-                        @Html.DisplayNameFor(model => model.EmailId)
-                    </label>
-                    <div class="col-sm-8">
-                        @Html.DisplayFor(model => model.EmailId)
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-4 control-label">
                         @Html.DisplayNameFor(model => model.FirstName)
                     </label>
                     <div class="col-sm-8">
@@ -38,6 +30,8 @@
                         @Html.DisplayFor(model => model.LastName)
                     </div>
                 </div>
+
+              
                 <div class="form-group">
                     <label for="inputEmail3" class="col-sm-4 control-label">
                         @Html.DisplayNameFor(model => model.PhoneNumber)
@@ -46,18 +40,27 @@
                         @Html.DisplayFor(model => model.PhoneNumber)
                     </div>
                 </div>
-
                 <div class="form-group">
-                    <b>
-                        <label for="inputEmail3" class="col-sm-6 control-label">
-                            @if (User.IsInRole("Admin"))
-                            {
-                                @Html.ActionLink("Edit Schedule", "Edit", new { id = Model.Id }, new { htmlAttributes = new { @class = "col-sm-4 control-label" } })
-                            }
-                            @Html.ActionLink("Back To List", "Index")
-                        </label>
-                    </b>
+                    <label for="inputEmail3" class="col-sm-4 control-label">
+                        @Html.DisplayNameFor(model => model.EmailId)
+                    </label>
+                    <div class="col-sm-8">
+                        @Html.DisplayFor(model => model.EmailId)
+                    </div>
                 </div>
+                <div class="form-group">
+                    <div class="register">
+                        @*@if (User.IsInRole("Admin"))
+                        {
+                            @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { htmlAttributes = new { @class = "col-sm-4 control-label" } })
+                        }*@
+                        @Html.ActionLink("Back To List", "Index")
+                    </div>
+                </div>
+                <label for="inputEmail3" class="col-sm-6 control-label">
+                   
+                   
+                </label>
             </div>
         }
     </div>
