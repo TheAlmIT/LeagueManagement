@@ -1,0 +1,138 @@
+﻿@model LMEntities.Models.Team
+
+@{
+    ViewBag.Title = "Create";
+}
+@using (Html.BeginForm("Create", "Teams", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="col-md-8 col-sm-8 mininumheight">
+        <div id="loginbox" style="margin-top: 10px;" class="mainbox col-md-9 col-md-offset-1 col-sm-9">
+            <h1>Create Team</h1>
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new {@class = "col-sm-4 control-label"})
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Name, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.Name, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.OrganizationId, htmlAttributes: new {@class = "col-sm-4 control-label"})
+                    <div class="col-md-8">
+                        @Html.DropDownListFor(model => model.OrganizationId, ViewBag.OrganizationId as IEnumerable<SelectListItem>, "Please Select", htmlAttributes: new {@class = "form-control"})
+                        @Html.ValidationMessageFor(model => model.OrganizationId, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.NickName, htmlAttributes: new {@class = "col-sm-4 control-label"})
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.NickName, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.NickName, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new {@class = "col-sm-4 control-label"})
+                    <div class="col-md-8">
+                        @Html.EditorFor(model => model.Description, new {htmlAttributes = new {@class = "form-control"}})
+                        @Html.ValidationMessageFor(model => model.Description, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.PhotoUrl, htmlAttributes: new {@class = "col-sm-4 control-label"})
+                    <div class="col-md-8">
+                        <input type="file" name="file"/>
+                        @Html.ValidationMessageFor(model => model.PhotoUrl, "", new {@class = "text-danger"})
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----Hi-->
+        <div class="col-md-12 col-sm-8 mininumheight">
+            <div class="tab-pane tab-pane1 fade in active" id="teamMembers">
+                <div class="panel-group" id="accordion2">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne1">
+                                    @Html.LabelFor(model => model.tm)
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne1" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordred table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th></th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.User.EmailId)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.User.PhoneNumber)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.User.FirstName)
+                                            </th>
+                                            <th>
+                                                @Html.DisplayNameFor(model => model.User.LastName)
+                                            </th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach (var item in Model.Users)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" name="chk-@item.Id" id="@item.EmailId" value="@item.Id"/>
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.EmailId)
+                                                    <input TYPE="hidden" VALUE="@item.EmailId">
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                                    <input TYPE="hidden" VALUE="@item.PhoneNumber">
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                                    <input TYPE="hidden" VALUE="@item.FirstName">
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.LastName)
+                                                    <input TYPE="hidden" VALUE="@item.LastName">
+                                                </td>
+                                            </tr>
+                                        }
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="register">
+                        @Html.ActionLink("Back", "Index", "Teams")
+                        <input type="submit" value="Create Team" class="btn btn-default create" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----END-->
+       
+             
+    </div>
+}
+
+    @Html.Partial("_PartialStyle")
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

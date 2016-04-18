@@ -5,34 +5,45 @@
 }
 
 
-<div class="form-group">
-    @Html.DisplayNameFor(model => model.Umpire)
 
-    @Html.ValidationMessageFor(model => model.Umpire, "", new { @class = "text-danger" })
-
-</div>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     <div class="col-md-12 col-sm-12 mininumheight">
+        <div class="form-group">
+            @Html.DisplayNameFor(model => model.Umpire)
+
+            @Html.ValidationMessageFor(model => model.Umpire, "", new { @class = "text-danger" })
+
+        </div>
+
+        <div class="form-group">
+            <div class="register">
+                @Html.ActionLink("Back", "Index", "Umpires")
+                <input type="submit" value="Add an Umpire" class="btn btn-default create" />
+            </div>
+        </div>
+
+
         <div class="table-responsive">
             <div class="form-horizontal">
-                <table class="col-md-12 table-bordered table-striped table-condensed cf">
+                <table class="col-md-10 table-bordered table-striped table-condensed cf">
                     <thead class="cf">
                         <tr>
                             <th class="numeric"></th>
-                            <th class="numeric">
-                                @Html.DisplayNameFor(model => model.EmailId)
-                            </th>
-                            <th class="numeric">
-                                @Html.DisplayNameFor(model => model.PhoneNumber)
-                            </th>
+
                             <th class="numeric">
                                 @Html.DisplayNameFor(model => model.FirstName)
                             </th>
                             <th class="numeric">
                                 @Html.DisplayNameFor(model => model.LastName)
                             </th>
+                           
+                            <th class="numeric">
+                                @Html.DisplayNameFor(model => model.PhoneNumber)
+                            </th><th class="numeric">
+    @Html.DisplayNameFor(model => model.EmailId)
+</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,15 +54,7 @@
                                     <input type="checkbox" name="chk-@item.Id" id="@item.EmailId" value="@item.Id" />
                                     @* @Html.CheckBoxFor(model => item.IsSelected)*@
                                 </td>
-                                <td class="numeric">
-                                    @Html.DisplayFor(modelItem => item.EmailId)
-                                    <input TYPE="hidden" VALUE="@item.EmailId">
-                                </td>
 
-                                <td class="numeric">
-                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                                    <input TYPE="hidden" VALUE="@item.PhoneNumber">
-                                </td>
                                 <td class="numeric">
                                     @Html.DisplayFor(modelItem => item.FirstName)
                                     <input TYPE="hidden" VALUE="@item.FirstName">
@@ -60,20 +63,22 @@
                                     @Html.DisplayFor(modelItem => item.LastName)
                                     <input TYPE="hidden" VALUE="@item.LastName">
                                 </td>
+                               
+
+                                <td class="numeric">
+                                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                                    <input TYPE="hidden" VALUE="@item.PhoneNumber">
+                                </td>
+                                <td class="numeric">
+                                    @Html.DisplayFor(modelItem => item.EmailId)
+                                    <input TYPE="hidden" VALUE="@item.EmailId">
+                                </td>
                             </tr>
                         }
-                        <tr>
-                            <td colspan="6">
-                                <div class="form-group">
-                                    <div class="col-md-offset-4 col-md-">
-                                        <input type="submit" value="Create" class="btn btn-default create" />
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
 }

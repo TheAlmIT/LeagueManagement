@@ -8,49 +8,72 @@
 
 <div class="col-md-12 col-sm-12 mininumheight">
     <div class="table-responsive">
-        <div class="form-group">
+        <div class="col-md-12 col-sm-12 mininumheight">
+            <div class="register">
+                <b> @Html.ActionLink("Add New Ground", "Create", new { htmlAttributes = new { @class = "col-sm-12 control-label back" } })</b>
 
-            <b> @Html.ActionLink("Add New Ground", "Create", new { htmlAttributes = new { @class = "col-sm-12 control-label back" } })</b>
-
-        </div>
-        <table class="col-md-12 table-bordered table-striped table-condensed cf">
-            <thead class="cf">
-                <tr>
-                    <th class="numeric">
-                        @Html.DisplayNameFor(model => model.Name)
-                        </th>
-                    <th class="numeric">
-                        @Html.DisplayNameFor(model => model.Address)
-                    </th>
-                    <th class="numeric">
-                        @Html.DisplayNameFor(model => model.Directions)
-                    </th>
-                    <th></th>
-                </tr>
-            </thead>
-
-                @foreach (var item in Model)
-                {
-                    <tbody>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-bordred table-striped">
+                    <thead class="cf">
                         <tr>
-                            <td class="numeric">
-                                @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td class="numeric">
-                                @Html.DisplayFor(modelItem => item.Address)
-                            </td>
-                            <td class="numeric">
-                                @Html.DisplayFor(modelItem => item.Directions)
-                            </td>
-                            <td class="numeric">
-                                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                            </td>
+                            <th class="numeric">
+                                @Html.DisplayNameFor(model => model.Name)
+                            </th>
+                            <th class="numeric">
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <th class="numeric">
+                                @Html.DisplayNameFor(model => model.Directions)
+                            </th>
+                            <th></th>
                         </tr>
-                    </tbody>
-                }
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="numeric">
+                                    @Html.DisplayFor(modelItem => item.Name)
+                                </td>
+                                <td class="numeric">
+                                    @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td class="numeric" style="width: 40%">
+                                    @Html.DisplayFor(modelItem => item.Directions)
+                                </td>
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <td class="numeric">
+                                        <a href="@Url.Action("Details", new {id = item.Id})">
+                                            <i class="glyphicon glyphicon-eye-open btn btn-primary btn-xs"></i>
+                                            <span class="sr-only">Details</span>
+                                        </a>
+                                        <a href="@Url.Action("Edit", new {id = item.Id})">
+                                            <i class="glyphicon glyphicon-edit btn btn-primary btn-xs"></i>
+                                            <span class="sr-only">Edit</span>
+                                        </a>
+                                        <a href="@Url.Action("Delete", new {id = item.Id})">
+                                            <i class="glyphicon glyphicon-trash btn btn-danger btn-xs"></i>
+                                            <span class="sr-only">Delete</span>
+                                        </a>
+                                    </td>
+                                }
 
-        </table>
+                                else
+                                {
+                                    <td class="numeric">
+                                        <a href="@Url.Action("Details", new {id = item.Id})">
+                                            <i class="glyphicon glyphicon-eye-open btn btn-primary btn-xs"></i>
+                                            <span class="sr-only">Details</span>
+                                        </a>
+                                    </td>
+                                }
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
+    </div>
 </div>

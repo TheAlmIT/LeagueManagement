@@ -5,6 +5,8 @@ using System.Web.Mvc;
 using LMEntities.Models;
 using Repository.Pattern.UnitOfWork;
 using LMService;
+using System;
+using System.Globalization;
 
 namespace LeagueManagement.Controllers
 {
@@ -26,7 +28,7 @@ namespace LeagueManagement.Controllers
         // GET: Schedules/Details/5
         public async Task<ActionResult> Details(int? id)
         {
-           Schedule schedule = _scheduleService.Find(id);
+            Schedule schedule = _scheduleService.Find(id);
             return View(schedule);
         }
 
@@ -37,7 +39,7 @@ namespace LeagueManagement.Controllers
             ViewBag.VisitorTeamId = new SelectList(_scheduleService.Teams, "Id", "Name");
             ViewBag.GroundId = new SelectList(_scheduleService.Grounds, "Id", "Name");
             ViewBag.SeasonId = new SelectList(_scheduleService.Seasons, "Id", "Name");
-           // ViewBag.YearId = new SelectList(db.Years, "Id", "YearNumber");
+            // ViewBag.YearId = new SelectList(db.Years, "Id", "YearNumber");
             ViewBag.Umpires = new SelectList(_scheduleService.Users.Where(a => a.UserTypeId == 2), "Id ", "UserName");
             return View();
         }
@@ -49,6 +51,17 @@ namespace LeagueManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(Schedule schedule)
         {
+
+            DateTime StartTime = DateTime.ParseExact(schedule.StartTime, "HH:mm",
+                                                    CultureInfo.InvariantCulture);
+            DateTime EndTime = DateTime.ParseExact(schedule.EndTime, "HH:mm",
+                                                   CultureInfo.InvariantCulture);
+
+            if(StartTime >= EndTime)
+            {
+                ModelState.AddModelError("StartTime", "Please check the time you entered");
+            }
+
             if (ModelState.IsValid)
             {
                 _scheduleService.Insert(schedule);
@@ -77,11 +90,13 @@ namespace LeagueManagement.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.HomeTeamId = new SelectList(_scheduleService.Teams, "Id", "Name");
-            ViewBag.VisitorTeamId = new SelectList(_scheduleService.Teams, "Id", "Name");
-            ViewBag.GroundId = new SelectList(_scheduleService.Grounds, "Id", "Name");
+            ViewBag.HomeTeamId = new SelectList(_scheduleService.Teams, "Id", "Name", schedule.HomeTeamId);
+            ViewBag.VisitorTeamId = new SelectList(_scheduleService.Teams, "Id", "Name", schedule.VisitorTeamId);
+            ViewBag.GroundId = new SelectList(_scheduleService.Grounds, "Id", "Name", schedule.GroundId);
             ViewBag.SeasonId = new SelectList(_scheduleService.Seasons, "Id", "Name", schedule.SeasonId);
-           // ViewBag.YearId = new SelectList(db.Years, "Id", "Id", schedule.YearId);
+            ViewBag.Umpires = new SelectList(_scheduleService.Users.Where(a => a.UserTypeId == 2), "Id ", "UserName", schedule.UmpireId);
+
+
             return View(schedule);
         }
 
@@ -92,6 +107,17 @@ namespace LeagueManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit([Bind(Include = "Id,SeasonId,YearId,HomeTeamId,VisitorTeamId,UmpireId,GroundId,ScheduleDate,StartTime,EndTime,CreatedOn,CreatedBy,ModifiedOn,ModfiedBy")] Schedule schedule)
         {
+            DateTime StartTime = DateTime.ParseExact(schedule.StartTime, "HH:mm",
+                                                   CultureInfo.InvariantCulture);
+            DateTime EndTime = DateTime.ParseExact(schedule.EndTime, "HH:mm",
+                                                   CultureInfo.InvariantCulture);
+
+            if (StartTime >= EndTime)
+            {
+                ModelState.AddModelError("StartTime", "Please check the time you entered");
+            }
+
+
             if (ModelState.IsValid)
             {
                 schedule.ObjectState = Repository.Pattern.Infrastructure.ObjectState.Modified;
@@ -99,11 +125,12 @@ namespace LeagueManagement.Controllers
                 _unitOfWork.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.HomeTeamId = new SelectList(_scheduleService.Teams, "Id", "Name");
-            ViewBag.VisitorTeamId = new SelectList(_scheduleService.Teams, "Id", "Name");
-            ViewBag.GroundId = new SelectList(_scheduleService.Grounds, "Id", "Name");
+            ViewBag.HomeTeamId = new SelectList(_scheduleService.Teams, "Id", "Name", schedule.HomeTeamId);
+            ViewBag.VisitorTeamId = new SelectList(_scheduleService.Teams, "Id", "Name", schedule.VisitorTeamId);
+            ViewBag.GroundId = new SelectList(_scheduleService.Grounds, "Id", "Name", schedule.GroundId);
             ViewBag.SeasonId = new SelectList(_scheduleService.Seasons, "Id", "Name", schedule.SeasonId);
-           // ViewBag.YearId = new SelectList(db.Years, "Id", "Id", schedule.YearId);
+            ViewBag.Umpires = new SelectList(_scheduleService.Users.Where(a => a.UserTypeId == 2), "Id ", "UserName", schedule.UmpireId);
+
             return View(schedule);
         }
 

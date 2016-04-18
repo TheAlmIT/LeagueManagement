@@ -1,0 +1,78 @@
+﻿@model LMEntities.Models.TeamMember
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+
+
+<div class="col-md-12 col-sm-12 mininumheight">
+    <div id="loginbox" style="margin-top:10px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <h1>Delete</h1>
+        <h2>Are you sure you want to delete this team member?</h2>
+        <h3>Team Member</h3>
+        <form class="form-horizontal team">
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.SkillSpeciality.Name)
+                </label>
+                <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.SkillSpeciality.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Team.Name)
+                </label><div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Team.Name)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.OrganizationId)
+                </label>
+                <div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.OrganizationId)
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </label><div class="col-sm-8">
+
+
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+
+           
+
+           
+    
+    </form>
+    @using (Html.BeginForm())
+            {
+        @Html.AntiForgeryToken()
+
+        <div class="form-group">
+            <input type="submit" value="Delete" class="btn btn-default create" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+
+
+
+    </div>
+
+

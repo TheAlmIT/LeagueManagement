@@ -1,0 +1,117 @@
+﻿@model IEnumerable<LMEntities.Models.Event>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EventType.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Organization.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Team1.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User1.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User2.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPhoneNumber1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContactPhoneNumber2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedOn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ModifiedOn)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EventType.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Organization.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Team1.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User1.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User2.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPhoneNumber1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContactPhoneNumber2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedOn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ModifiedOn)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

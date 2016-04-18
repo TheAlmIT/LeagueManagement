@@ -39,7 +39,7 @@ namespace LeagueManagement.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            League league = await _leagueService.FindAsync(id);
+            League league =  _leagueService.Find(id);
             if (league == null)
             {
                 return HttpNotFound();
@@ -113,7 +113,7 @@ namespace LeagueManagement.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            League league = await _leagueService.FindAsync(id);
+            League league = _leagueService.Find(id);
             if (league == null)
             {
                 return HttpNotFound();

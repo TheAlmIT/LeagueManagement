@@ -33,12 +33,15 @@ namespace LMEntities.Models
         public int Id { get; set; }
         public int OrganizationId { get; set; }
         public Nullable<int> UserTypeId { get; set; }
+        [DisplayName("Email ID")]
         public string EmailId { get; set; }
         [NotMapped]
         public bool IsSelected { get; set; }
+        [DisplayName("Phone Number")]
         public string PhoneNumber { get; set; }
-
+        [DisplayName("First Name")]
         public string FirstName { get; set; }
+        [DisplayName("Last Name")]
         public string LastName { get; set; }
         public string Password { get; set; }     
         public string UserName
@@ -47,6 +50,24 @@ namespace LMEntities.Models
         }
         public Nullable<int> GenderId { get; set; }
         public string ProfilePhoto { get; set; }
+        public string NickName { get; set; }
+        [DisplayName("Skill")]
+        public Nullable<int> SkillSpecialityId { get; set; }
+        public Nullable<System.DateTime> Birthday { get; set; }
+        public string PlaceofBirth { get; set; }
+        public Nullable<int> LivedInUSAsince { get; set; }
+        public string SchoolName { get; set; }
+        public string Grade { get; set; }
+        public string BattingStyle { get; set; }
+        public string FavouriteShot { get; set; }
+        public string BowlingStyle { get; set; }
+        public string FavoriteCricketer { get; set; }
+        public string Likes { get; set; }
+        public string Dislikes { get; set; }
+        public string FavouriteFood { get; set; }
+        public string FavouriteMovie { get; set; }
+        public string Ambition { get; set; }
+        public string Hobbies { get; set; }
         public Nullable<System.DateTime> CreatedOn { get; set; }
         public Nullable<System.DateTime> ModifiedOn { get; set; }
         public virtual ICollection<Event> Events { get; set; }
@@ -68,16 +89,19 @@ namespace LMEntities.Models
         public virtual ICollection<MediaComment> MediaComments1 { get; set; }
         public virtual ICollection<Schedule> Schedules { get; set; }
         public virtual ICollection<TeamMember> TeamMembers { get; set; }
+        public virtual SkillSpeciality SkillSpeciality { get; set; }
+
         public virtual Organization Organization { get; set; }
         public virtual ICollection<Team> Teams { get; set; }
-        public virtual User User1 { get; set; }
-        public virtual User User2 { get; set; }
+       
         public virtual UserType UserType { get; set; }
 
         [NotMapped]
         [DisplayName("Umpires")]
         public string Umpire { get; set; }
 
+        
+        public string AspNetUsersId { get; set; }
 
         [NotMapped]
         public virtual ICollection<User> Umpires { get; set; }

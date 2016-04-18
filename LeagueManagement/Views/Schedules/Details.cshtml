@@ -84,18 +84,20 @@
                         @Html.DisplayFor(model => model.EndTime)
                     </div>
                 </div>
-                               
                 <div class="form-group">
-                    <b>
-                        <label for="inputEmail3" class="col-sm-6 control-label">
+
+                    <div class="col-md-offset-4 col-md-10">
+                        <div class="register">
+                            @Html.ActionLink("Back", "Index")
                             @if (User.IsInRole("Admin"))
                             {
-                            @Html.ActionLink("Edit Schedule", "Edit", new { id = Model.Id }, new { htmlAttributes = new { @class = "col-sm-4 control-label" } }) 
-                             }
-                            @Html.ActionLink("Back To List", "Index")
-                        </label>
-</b>
+                           @Html.ActionLink("Edit Schedule", "Edit", new { id = Model.Id })
+                            }
+                        </div>
+                    </div>
                 </div>
+
+               
             </div>
         }
     </div>

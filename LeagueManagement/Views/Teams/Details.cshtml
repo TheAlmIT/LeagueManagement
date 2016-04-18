@@ -1,0 +1,122 @@
+﻿@model LMEntities.Models.Team
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="col-md-8 col-sm-6 mininumheight">
+    <div style="margin-top: 10px;" class="col-md-2 col-sm-9">
+        @if (Model.PhotoUrl != null)
+        {
+            <img src="@Url.Content(Model.PhotoUrl)" alt="Image" style="height:150px;width:150px;" />
+        }
+    </div>
+    <div id="loginbox" style="margin-top: 10px;" class="mainbox col-md-7 col-md-offset-1 col-sm-9">
+        <h2>Team Details</h2>
+        <hr />
+        <div class="form-horizontal team">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Name)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.Name)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.NickName)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.NickName)
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-4 control-label">
+                    @Html.DisplayNameFor(model => model.Description)
+                </label>
+                <div class="col-sm-8">
+                    @Html.DisplayFor(model => model.Description)
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="register">
+                    @Html.ActionLink("Back", "Index")
+                    @Html.ActionLink("Edit Team", "Edit", new { id = Model.Id })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@Html.Partial("_PartialStyle")
+
+<div class="col-md-12 col-sm-8 mininumheight">
+    <div class="tab-pane tab-pane1 fade in active" id="teamMembers">
+        <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne1">
+                            Team Members
+                        </a>
+                    </h4>
+                </div>
+                <div id="collapseOne1" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table id="tblteamMembers" class="table table-bordred table-striped">
+                                <thead>
+                                <tr>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Name)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Users.Single().NickName)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Users.Single().Grade)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Users.Single().BattingStyle)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Users.Single().BowlingStyle)
+                                    </th>
+                                    <th>
+                                        @Html.DisplayNameFor(model => model.Users.Single().SkillSpecialityId)
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.Users)
+                                    {
+                                        <tr>
+                                            <td class="">
+                                                @Html.ActionLink(item.UserName, "Details", "Users", new { id = item.Id }, null)
+                                            </td>
+                                            <td class="">
+                                                @Html.DisplayFor(model => item.NickName)
+                                            </td>
+                                            <td class="">
+                                                @Html.DisplayFor(model => item.Grade)
+                                            </td>
+                                            <td class="">
+                                                @Html.DisplayFor(model => item.BattingStyle)
+                                            </td>
+                                            <td class="">
+                                                @Html.DisplayFor(model => item.BowlingStyle)
+                                            </td>
+                                            <td class="">
+                                                @Html.DisplayFor(model => item.SkillSpeciality.Name)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
